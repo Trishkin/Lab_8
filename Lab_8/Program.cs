@@ -1,5 +1,4 @@
-﻿using Lab_8.Interfaces;
-using System;
+﻿using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
@@ -127,7 +126,7 @@ namespace Lab_8
             }
         }
 
-        public void Info()
+        public void PrintInfo()
         {
             foreach (var item in this)
             {
@@ -364,58 +363,58 @@ namespace Lab_8
         }
 static void Main(string[] args)
         {
-            List<string> list = new List<string>();
-            list.Add("Abraam");
-            list.Add("Linkoln");
-            List<char[]> list2 = new List<char[]>();
-            list2.Add(("Avraam").ToCharArray());
-            list2.Add(("Linkoln").ToCharArray());
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
+            List<string> List1 = new List<string>();
+
+            List1.Add("Abraam");
+            List1.Add("Linkoln");
+
+            List<object> List2 = new List<object>();
+            List2.Add("Avraam");
+            List2.Add("Linkoln");
+
+            List<Journal> List3 = new List<Journal>();
+            Journal MyJournal = new Journal();
+            MyJournal.NameOfBook = "Avraam Linkoln";
+            MyJournal.Age = 1815;
+            MyJournal.Price = 50;
+            MyJournal.Period = "Monthly";
+            List3.Add(MyJournal);
+
+            List1.PrintInfo();
             Console.WriteLine();
-            foreach (var item in list2)
-            {
-                Console.WriteLine(item);
-            }
-            StreamWrite(list);
+            List2.PrintInfo();
+            Console.WriteLine();
+            List3.PrintInfo();
+
+            StreamWrite(List1);
             StreamRead();
+
             //Console.WriteLine("equality");
-            //Console.WriteLine(list == list2);
-            //Boolean a = list + "sfdf sdfsqqe sdf";
+            //Console.WriteLine(List1 == List2);
+            //Boolean a = List + "sfdf sdfsqqe sdf";
             //Console.WriteLine();
             //Console.WriteLine("add elem");
-            //foreach (var item in list)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //a = list >> 2;
+            //List1.PrintInfo();
+            //a = List >> 2;
             //Console.WriteLine();
             //Console.WriteLine("del elem");
-            //foreach (var item in list)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            //List1.PrintInfo();
             //Console.WriteLine();
             //Console.WriteLine("max word");
-            //Console.WriteLine(list.MaxWord());
+            //Console.WriteLine(List1.MaxWord());
             //Console.WriteLine();
             //Console.WriteLine("del last elem");
-            //Console.WriteLine(list.DelLast());
-            //foreach (var item in list)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            //Console.WriteLine(List1.DelLast());
+            //List1.PrintInfo();
             //Console.WriteLine();
 
-            //List<string>.Owner owner1 = new List<string>.Owner(1218, "Dima", "OOP");
-            //Console.WriteLine($"id = {owner1.id}, name = {owner1.name}, organization = {owner1.organization}");
+            //List<string>.Owner Owner1 = new List<string>.Owner(1218, "Dima", "OOP");
+            //Console.WriteLine($"id = {Owner1.id}, name = {Owner1.name}, organization = {Owner1.organization}");
             //List<string>.Date.info();
 
-            //Console.WriteLine($"Sum = {list.Sum("14", "4")}");
-            //Console.WriteLine($"Difference = {list.Difference()}");
-            //Console.WriteLine($"CountElem = {list.CountElem()}");
+            //Console.WriteLine($"Sum = {List1.Sum("14", "4")}");
+            //Console.WriteLine($"Difference = {List1.Difference()}");
+            //Console.WriteLine($"CountElem = {List1.CountElem()}");
             Console.ReadKey();
         }
     }

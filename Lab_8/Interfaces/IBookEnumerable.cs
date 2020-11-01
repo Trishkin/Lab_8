@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab_8.Interfaces
+namespace Lab_8
 {
     interface IBookEnumerable<T> where T: class
     {
@@ -15,8 +15,8 @@ namespace Lab_8.Interfaces
             Console.WriteLine($"Вы должны передать значение");
             return false;
         }
-        public void Info()
-        { }
+        public void PrintInfo()
+        {
+        }
     }
-        
 }
