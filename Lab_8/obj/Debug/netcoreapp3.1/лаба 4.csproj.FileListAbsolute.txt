@@ -1,0 +1,26 @@
+D:\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.exe
+D:\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.deps.json
+D:\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.runtimeconfig.json
+D:\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.runtimeconfig.dev.json
+D:\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.dll
+D:\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.pdb
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.csprojAssemblyReference.cache
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.AssemblyInfoInputs.cache
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.AssemblyInfo.cs
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.csproj.CoreCompileInputs.cache
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.dll
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.pdb
+D:\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.genruntimeconfig.cache
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.exe
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.deps.json
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.runtimeconfig.json
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.runtimeconfig.dev.json
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.dll
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\bin\Debug\netcoreapp3.1\лаба 4.pdb
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.csprojAssemblyReference.cache
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.AssemblyInfoInputs.cache
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.AssemblyInfo.cs
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.csproj.CoreCompileInputs.cache
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.dll
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.pdb
+D:\ООП 2 курс\1 сем\лаба 4\лаба 4\obj\Debug\netcoreapp3.1\лаба 4.genruntimeconfig.cache
