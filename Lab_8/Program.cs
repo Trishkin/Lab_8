@@ -312,15 +312,18 @@ namespace Lab_8
     {
         public static void StreamWrite(List<string> dataToWrite)
         {
-            string writePath = @"C:\SomeDir\hta.txt";
+            string writePath = @"D:\1111\hta.txt";
+            using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+            {
+                sw.Write("");
+            }
             try
             {
                 foreach (var item in dataToWrite)
                 {
                     using (StreamWriter sw = new StreamWriter(writePath, true, System.Text.Encoding.Default))
                     {
-                        sw.WriteLine("Дозапись");
-                        sw.Write(4.5);
+                        sw.WriteLine(item);
                     }
                 }
                 Console.WriteLine("Запись выполнена");
@@ -334,9 +337,9 @@ namespace Lab_8
                 Console.WriteLine("I'm all");
             }
         }
-        public static void StreamRead()
+        public static /*async*/ void StreamRead()
         {
-        string path = @"C:\SomeDir\hta.txt";
+        string path = @"D:\1111\hta.txt";
  
             try
             {
@@ -344,15 +347,19 @@ namespace Lab_8
                 {
                     Console.WriteLine(sr.ReadToEnd());
                 }
-                // асинхронное чтение
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    Console.WriteLine(sr.ReadToEndAsync());
-                }
+
+                //using (StreamReader sr = new StreamReader(path))
+                //{
+                //    Console.WriteLine(await sr.ReadToEndAsync());
+                //}
             }
             catch (Exception e)
             {
              Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("I'm all");
             }
         }
 static void Main(string[] args)
@@ -372,6 +379,8 @@ static void Main(string[] args)
             {
                 Console.WriteLine(item);
             }
+            StreamWrite(list);
+            StreamRead();
             //Console.WriteLine("equality");
             //Console.WriteLine(list == list2);
             //Boolean a = list + "sfdf sdfsqqe sdf";
