@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab_8.Interfaces
 {
-    interface IBookEnumerable<T> where T: struct
+    interface IBookEnumerable<T> where T: class
     {
         public void Add(T data)
         {

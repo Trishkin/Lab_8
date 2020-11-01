@@ -1,5 +1,6 @@
 ﻿using Lab_8.Interfaces;
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace Lab_8
         public Node<T> Next { get; set; }
     }
 
-    public class List<T> : IEnumerable<T>,IBookEnumerable<T>  // односвязный список
+    public class List<T> : IEnumerable<T>,IBookEnumerable<T> where T : class  // односвязный список
     {
         public Node<T> head; // головной/первый элемент
         public Node<T> tail; // последний/хвостовой элемент
@@ -307,52 +308,105 @@ namespace Lab_8
     }
 
 
-
     class Program
     {
-        static void Main(string[] args)
+        public static void StreamWrite(List<string> dataToWrite)
+        {
+            string writePath = @"C:\SomeDir\hta.txt";
+            try
+            {
+                foreach (var item in dataToWrite)
+                {
+                    using (StreamWriter sw = new StreamWriter(writePath, true, System.Text.Encoding.Default))
+                    {
+                        sw.WriteLine("Дозапись");
+                        sw.Write(4.5);
+                    }
+                }
+                Console.WriteLine("Запись выполнена");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("I'm all");
+            }
+        }
+        public static void StreamRead()
+        {
+        string path = @"C:\SomeDir\hta.txt";
+ 
+            try
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    Console.WriteLine(sr.ReadToEnd());
+                }
+                // асинхронное чтение
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    Console.WriteLine(sr.ReadToEndAsync());
+                }
+            }
+            catch (Exception e)
+            {
+             Console.WriteLine(e.Message);
+            }
+        }
+static void Main(string[] args)
         {
             List<string> list = new List<string>();
             list.Add("Abraam");
             list.Add("Linkoln");
-            List<string> list2 = new List<string>();
-            list2.Add("Abraam");
-            list2.Add("Linkoln");
-            Console.WriteLine("equality");
-            Console.WriteLine(list == list2);
-            Boolean a = list + "sfdf sdfsqqe sdf";
-            Console.WriteLine();
-            Console.WriteLine("add elem");
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-            a = list >> 2;
-            Console.WriteLine();
-            Console.WriteLine("del elem");
+            List<char[]> list2 = new List<char[]>();
+            list2.Add(("Avraam").ToCharArray());
+            list2.Add(("Linkoln").ToCharArray());
             foreach (var item in list)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine();
-            Console.WriteLine("max word");
-            Console.WriteLine(list.MaxWord());
-            Console.WriteLine();
-            Console.WriteLine("del last elem");
-            Console.WriteLine(list.DelLast());
-            foreach (var item in list)
+            foreach (var item in list2)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine();
+            //Console.WriteLine("equality");
+            //Console.WriteLine(list == list2);
+            //Boolean a = list + "sfdf sdfsqqe sdf";
+            //Console.WriteLine();
+            //Console.WriteLine("add elem");
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //a = list >> 2;
+            //Console.WriteLine();
+            //Console.WriteLine("del elem");
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("max word");
+            //Console.WriteLine(list.MaxWord());
+            //Console.WriteLine();
+            //Console.WriteLine("del last elem");
+            //Console.WriteLine(list.DelLast());
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine();
 
-            List<string>.Owner owner1 = new List<string>.Owner(1218, "Dima", "OOP");
-            Console.WriteLine($"id = {owner1.id}, name = {owner1.name}, organization = {owner1.organization}");
-            List<string>.Date.info();
+            //List<string>.Owner owner1 = new List<string>.Owner(1218, "Dima", "OOP");
+            //Console.WriteLine($"id = {owner1.id}, name = {owner1.name}, organization = {owner1.organization}");
+            //List<string>.Date.info();
 
-            Console.WriteLine($"Sum = {list.Sum("14", "4")}");
-            Console.WriteLine($"Difference = {list.Difference()}");
-            Console.WriteLine($"CountElem = {list.CountElem()}");
+            //Console.WriteLine($"Sum = {list.Sum("14", "4")}");
+            //Console.WriteLine($"Difference = {list.Difference()}");
+            //Console.WriteLine($"CountElem = {list.CountElem()}");
             Console.ReadKey();
         }
     }
